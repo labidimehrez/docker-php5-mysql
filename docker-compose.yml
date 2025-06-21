@@ -1,4 +1,4 @@
- 
+
 services:
   php-app:
     build: .
@@ -10,7 +10,7 @@ services:
     environment:
       - DB_HOST=host.docker.internal
       - DB_USER=root
-      - DB_PASSWORD=198900520
+      - DB_PASSWORD=19890520
       - DB_NAME=db_sf_test
     extra_hosts:
       - "host.docker.internal:host-gateway"
