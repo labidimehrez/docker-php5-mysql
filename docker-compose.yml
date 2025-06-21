@@ -1,0 +1,22 @@
+ 
+services:
+  php-app:
+    build: .
+    container_name: php56-app-simple-test-new
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    environment:
+      - DB_HOST=host.docker.internal
+      - DB_USER=root
+      - DB_PASSWORD=198900520
+      - DB_NAME=fusacq_dbo
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
